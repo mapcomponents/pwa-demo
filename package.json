@@ -1,0 +1,41 @@
+{
+  "name": "app_title",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "git apply patches/elasticlunr.diff; vite",
+    "build": "git apply patches/elasticlunr.diff; vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "processData": "./docker/data_processing_script/process_data.sh"
+  },
+  "dependencies": {
+    "@mapbox/tilebelt": "^1.0.2",
+    "@mapcomponents/react-maplibre": "^1.0.3",
+    "elasticlunr": "^0.9.5",
+    "pmtiles": "^3.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sql.js": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/elasticlunr": "^0.9.5",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "sqlite3": "^5.1.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.3",
+    "vite-plugin-pwa": "^0.19.0",
+    "workbox-core": "^7.0.0",
+    "workbox-precaching": "^7.0.0",
+    "workbox-routing": "^7.0.0",
+    "workbox-window": "^7.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "pwa-demo": {
+    "name": "PWADemo",
+    "title": "PWA Demo",
+    "description": "This application merges PWA technology with MapComponents, aiming to provide reliable, fail-safe access to critical information offline. It uses Service Worker for enhanced performance and data accessibility.",
+    "i18n": {
+      "de": {
+        "title": "PWA Demo",
+        "description": "Diese Anwendung kombiniert PWA-Technologie mit MapComponents und bietet dadurch zuverlässigen, ausfallsicheren Zugang zu Daten. Genutzt wird ein Service Worker für verbesserte Performance und offline Funktionalität."
+      }
+    },
+    "tags": [],
+    "category": "",
+    "type": "application",
+    "components": ["MlCreatePdfForm", "MlGeoJsonLayer", "MlNavigationTools"],
+    "thumbnail": "https://mapcomponents.github.io/pwa-demo/assets/assets/thumbnail.png",
+    "demos": [
+      {
+        "name": "Demo",
+        "url": "https://mapcomponents.github.io/pwa-demo/",
+        "closeButtonPosition": "top_right"
+      }
+    ]
+  }
+}

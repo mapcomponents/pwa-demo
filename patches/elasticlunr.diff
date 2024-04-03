@@ -1,0 +1,13 @@
+diff --git a/node_modules/elasticlunr/elasticlunr.js b/node_modules/elasticlunr/elasticlunr.js
+index 37d9986..034f0ce 100644
+--- a/node_modules/elasticlunr/elasticlunr.js
++++ b/node_modules/elasticlunr/elasticlunr.js
+@@ -87,7 +87,7 @@ elasticlunr.version = "0.9.5";
+ 
+ // only used this to make elasticlunr.js compatible with lunr-languages
+ // this is a trick to define a global alias of elasticlunr
+-lunr = elasticlunr;
++var lunr = elasticlunr;
+ 
+ /*!
+  * elasticlunr.utils

@@ -1,0 +1,74 @@
+{
+  "name": "Amsterdam offline PWA",
+  "bbox": [4.76635, 52.295672, 5.07225, 52.434037],
+  "geometryConfig": {
+    "tram_line": {
+      "displayName": "Tram",
+      "path": "data/tram_line.json",
+      "ID": "id",
+      "propertiesTiles": ["Lijn"],
+      "paint": {
+        "line-color": "#B40000"
+      },
+      "type": "line",
+      "minzoom": 15,
+      "maxzoom": 24
+    },
+    "tramhalte_point": {
+      "displayName": "Tramhalte",
+      "path": "data/tramhalte_point.json",
+      "ID": "Naam",
+      "propertiesTiles": ["Naam", "Label"],
+      "type": "circle",
+      "paint": {
+        "circle-stroke-width": 2,
+        "circle-radius": 10,
+        "circle-color": "#ffffff",
+        "circle-stroke-color": "#B40000"
+      },
+      "minzoom": 15,
+      "maxzoom": 24
+    }
+  },
+  "dataTileConfig": {
+    "sourceOptions": {
+      "maxzoom": 24,
+      "minzoom": 7
+    },
+    "insertBeforeLayer": "marker-lq-data",
+    "layers": [
+      {
+        "id": "lq-data_tram_line",
+        "source-layer": "tramhalte",
+        "type": "line",
+        "layout": {},
+        "paint": {
+          "line-color": "#22b14c",
+          "line-width": 2
+        },
+        "maxzoom": 15,
+        "minzoom": 7
+      },
+      {
+        "id": "lq-data_tramhalte_point",
+        "source-layer": "tram",
+        "type": "circle",
+        "layout": {},
+        "paint": {
+          "circle-color": ["step", ["zoom"], "#ffffff", 15, "rgba(0,0,0,0)"],
+          "circle-stroke-width": 2,
+          "circle-stroke-color": [
+            "step",
+            ["zoom"],
+            "#22b14c",
+            15,
+            "rgba(0,0,0,0)"
+          ],
+          "circle-radius": 10
+        },
+        "maxzoom": 24,
+        "minzoom": 7
+      }
+    ]
+  }
+}

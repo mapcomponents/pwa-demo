@@ -1,0 +1,21 @@
+{
+	"name": "scripts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "updateBackgroundTiles.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"elasticlunr": "^0.9.5",
+		"natural": "^6.3.0",
+		"@mapbox/tilebelt": "^1.0.2",
+		"@turf/turf": "^6.5.0",
+		"nodejs-file-downloader": "^4.9.2",
+		"request": "^2.88.2",
+		"request-promise-native": "^1.0.9",
+		"sqlite3": "^5.1.6"
+	},
+	"author": "",
+	"license": "ISC"
+}
