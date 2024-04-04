@@ -2,10 +2,10 @@
 
 # PWA-Demo with MapComponents + vite + react + typescript
 
-## Overview
+This project merges PWA technology with MapComponents, aiming to provide reliable, fail-safe access to data offline. It uses a Service Worker for enhanced performance and data accessibility.
+MapComponents MapLibre is a react component library for declarative GIS application development.
 
-This project merges PWA technology with MapComponents, aiming to provide reliable, fail-safe access to critical information offline. It uses Service Worker for enhanced performance and data accessibility.
-[MapComponents MapLibre](https://github.com/mapcomponents/react-map-components-maplibre) is a react component library for declarative GIS application development.
+
 
 ## Links
 
@@ -20,6 +20,25 @@ This project merges PWA technology with MapComponents, aiming to provide reliabl
 
 ## Getting Started
 
+Install project dependencies:
+
+```bash
+yarn
+```
+Docker: 
+
+```bash
+docker build . -t mc_pwa_data_processing
+docker run -d -p 8080:8080 mc_pwa_data_processing
+```
+
+### Update data
+To build background tiles, data tiles, geometry and search indices. 
+
+```bash
+yarn processData
+```
+
 ### Start the development server
 
 ```bash
@@ -32,10 +51,3 @@ yarn dev
 yarn build
 ```
 
-## Contribution
-
-Contributions are welcome. Please follow our contributing guidelines.
-
-## License
-
-Licensed under the MIT License. See LICENSE for details.
