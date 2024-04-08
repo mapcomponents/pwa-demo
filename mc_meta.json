@@ -13,7 +13,7 @@
     "category": "",
     "type": "application",
     "components": ["MlCreatePdfForm", "MlGeoJsonLayer", "MlNavigationTools"],
-    "thumbnail": "https://mapcomponents.github.io/pwa-demo/assets/assets/thumbnail.png",
+    "thumbnail": "https://raw.githubusercontent.com/mapcomponents/pwa-demo/main/assets/thumbnail.png",
     "demos": [
       {
         "name": "Demo",
