@@ -15,6 +15,14 @@ WORKDIR /tmp/tippecanoe-src
 RUN make \
   && make install
 
+# Copy scripts and extract pmtiles
+COPY scripts /scripts
+COPY pwa_config /pwa_config
+RUN ls -al /scripts
+COPY /scripts/convert_pmtiles/pmtiles /usr/local/bin/ 
+RUN cd /scripts && npm install
+
+
 # Remove the temp directory and unneeded packages
 WORKDIR /
 RUN rm -rf /tmp/tippecanoe-src \
