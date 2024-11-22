@@ -19,8 +19,9 @@ RUN make \
 COPY scripts /scripts
 COPY pwa_config /pwa_config
 RUN ls -al /scripts
-COPY /scripts/convert_pmtiles/pmtiles /usr/local/bin/ 
+COPY scripts /scripts
 RUN cd /scripts && npm install
+COPY pwa_config /pwa_config
 
 
 # Remove the temp directory and unneeded packages
