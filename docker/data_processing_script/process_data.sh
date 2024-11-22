@@ -24,15 +24,12 @@ mkdir ${OUTPUT_DIRECTORY}/search
 mkdir ${OUTPUT_DIRECTORY}/data_tiles
 mkdir ${OUTPUT_DIRECTORY}/background_tiles
 chmod 777 -R ${OUTPUT_DIRECTORY}
-ls -al ${OUTPUT_DIRECTORY}
-echo ${PWD}/${OUTPUT_DIRECTORY}
 
 cd docker/data_processing_container
 cp -r ../../pwa_config ./
 docker build -t mc_pwa_data_processing ./
 rm -rf ./pwa_config
 cd ../..
-# docker run --user $(id -u):$(id -g) -t --rm -v ${PWD}/${OUTPUT_DIRECTORY}/:/app_data:rw mc_pwa_data_processing bash -c "ls -al /app_data && $CONTAINER_COMMAND"
 docker run --user $(id -u):$(id -g) -t --rm -v ${PWD}/${OUTPUT_DIRECTORY}/:/app_data/:rw mc_pwa_data_processing bash -c "ls -al /app_data && $CONTAINER_COMMAND"
 
 
