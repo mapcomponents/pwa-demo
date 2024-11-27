@@ -17,7 +17,7 @@
     "tramhalte_point": {
       "displayName": "Tramhalte",
       "path": "data/tramhalte_point.json",
-      "ID": "Naam",
+      "ID": "Naam_unique",
       "propertiesTiles": ["Naam", "Label"],
       "type": "circle",
       "paint": {

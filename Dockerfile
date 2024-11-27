@@ -1,4 +1,4 @@
-FROM node:20 as node_builder
+FROM node:20 AS node_builder
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN yarn
