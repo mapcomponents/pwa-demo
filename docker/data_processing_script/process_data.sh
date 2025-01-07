@@ -2,15 +2,9 @@
 
 set -x
 
-files_to_check=(
-#"adressen.geojson"
-#"armatur_real.geojson"
-)
+files_to_check=()
 
-
-# until scripts/deleteSuperfluousFiles.js is checked in
 CONTAINER_COMMAND="node /scripts/updateBackgroundTiles.js && node ./scripts/generateDataVectorTiles.js && node ./scripts/generateGeometryIndex.js || echo 'Failed to update data.'"
-
 
 OUTPUT_DIRECTORY=./app_data
 SOURCE=/pwadata/
